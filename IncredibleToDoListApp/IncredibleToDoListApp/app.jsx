@@ -4,20 +4,33 @@
  * @format
  */
 
-import React from 'react';
-import {SafeAreaview, StyleSheet} from 'react-native';
+import React, { useState } from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import ToDoForm from './components/ToDoForm';
 import ToDoList from './components/ToDoList';
 
 function App() {
+  // Part A: State Management
+  const [tasks, setTasks] = useState([
+    'Do laundry',
+    'Go to gym',
+    'Walk dog',
+  ]);
+
   return (
-    <SafeAreaview>
+    <SafeAreaView style={styles.container}>
       <ToDoForm />
-      <ToDoList />
-    </SafeAreaview>
+      {/* Part B: Passing Props */}
+      <ToDoList tasks={tasks} />
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 16,
+  },
+});
 
 export default App;
