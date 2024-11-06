@@ -1,5 +1,5 @@
-import React from "react";
-import { View, Text, Pressable, StyleSheet, ScrollView } from "react-native";
+import React from 'react';
+import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
 
 function ToDoList({ tasks }) {
   return (
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 16,
-  }
+  },
 });
 
 export default ToDoList;
